@@ -12,8 +12,10 @@
 
 // Controllers
 #import "LCVideoViewController.h"
+#import "LCVideoContainerController.h"
 
 static NSString * const kSingleVideoViewController = @"单一播放器";
+static NSString * const kVideoContainerController = @"视频播放页(仿头条)";
 
 @interface LCRootTableViewController ()
 
@@ -26,7 +28,7 @@ static NSString * const kSingleVideoViewController = @"单一播放器";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataSource = @[kSingleVideoViewController];
+    self.dataSource = @[kSingleVideoViewController, kVideoContainerController];
     
     self.tableView.tableFooterView = [UIView new];
 }
@@ -57,6 +59,14 @@ static NSString * const kSingleVideoViewController = @"单一播放器";
             model.videoURL = kVideo1;
             LCVideoViewController *videoViewController = [[LCVideoViewController alloc] initWithVideoModel:model];
             [self.navigationController pushViewController:videoViewController animated:YES];
+        }
+            break;
+            
+        case 1: {
+            LCVideoModel *model = [[LCVideoModel alloc] init];
+            model.videoURL = kVideo1;
+            LCVideoContainerController *videoContainerController = [[LCVideoContainerController alloc] initWithVideoModel:model];
+            [self.navigationController pushViewController:videoContainerController animated:YES];
         }
             break;
             

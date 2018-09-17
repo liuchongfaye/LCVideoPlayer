@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		17E59796301D0093958D1864 /* Pods_LCVideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D748AF792747189944D213F /* Pods_LCVideoPlayer.framework */; };
+		444EDBD8213E8FC100D4813D /* LCVideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444EDBD7213E8FC100D4813D /* LCVideoControlView.m */; };
+		44B0FD24214F510600B0CAFC /* LCRecommendationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B0FD22214F510600B0CAFC /* LCRecommendationTableViewCell.m */; };
+		44B0FD2A214F517C00B0CAFC /* LCRecommendationTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B0FD29214F517C00B0CAFC /* LCRecommendationTableController.m */; };
+		44B0FD31214F534700B0CAFC /* LCVideoContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B0FD30214F534700B0CAFC /* LCVideoContainerController.m */; };
+		44B0FD34214F545000B0CAFC /* LCCommentToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B0FD33214F545000B0CAFC /* LCCommentToolBar.m */; };
+		44B0FD36214F691400B0CAFC /* Avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44B0FD35214F691400B0CAFC /* Avatar.jpg */; };
 		44C8B142213D3B690069B3DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C8B141213D3B690069B3DE /* AppDelegate.m */; };
 		44C8B148213D3B690069B3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C8B146213D3B690069B3DE /* Main.storyboard */; };
 		44C8B14A213D3B6B0069B3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C8B149213D3B6B0069B3DE /* Assets.xcassets */; };
@@ -33,6 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		444EDBD6213E8FC100D4813D /* LCVideoControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCVideoControlView.h; sourceTree = "<group>"; };
+		444EDBD7213E8FC100D4813D /* LCVideoControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCVideoControlView.m; sourceTree = "<group>"; };
+		44B0FD22214F510600B0CAFC /* LCRecommendationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCRecommendationTableViewCell.m; sourceTree = "<group>"; };
+		44B0FD23214F510600B0CAFC /* LCRecommendationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCRecommendationTableViewCell.h; sourceTree = "<group>"; };
+		44B0FD28214F517C00B0CAFC /* LCRecommendationTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCRecommendationTableController.h; sourceTree = "<group>"; };
+		44B0FD29214F517C00B0CAFC /* LCRecommendationTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCRecommendationTableController.m; sourceTree = "<group>"; };
+		44B0FD2F214F534700B0CAFC /* LCVideoContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCVideoContainerController.h; sourceTree = "<group>"; };
+		44B0FD30214F534700B0CAFC /* LCVideoContainerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCVideoContainerController.m; sourceTree = "<group>"; };
+		44B0FD32214F545000B0CAFC /* LCCommentToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCommentToolBar.h; sourceTree = "<group>"; };
+		44B0FD33214F545000B0CAFC /* LCCommentToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCCommentToolBar.m; sourceTree = "<group>"; };
+		44B0FD35214F691400B0CAFC /* Avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatar.jpg; sourceTree = "<group>"; };
 		44C8B13D213D3B690069B3DE /* LCVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C8B140213D3B690069B3DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44C8B141213D3B690069B3DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,6 +106,77 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		44B0FD1B214F500F00B0CAFC /* Recommendation */ = {
+			isa = PBXGroup;
+			children = (
+				44B0FD35214F691400B0CAFC /* Avatar.jpg */,
+				44B0FD1F214F510600B0CAFC /* Controllers */,
+				44B0FD20214F510600B0CAFC /* Models */,
+				44B0FD21214F510600B0CAFC /* Views */,
+			);
+			path = Recommendation;
+			sourceTree = "<group>";
+		};
+		44B0FD1F214F510600B0CAFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44B0FD28214F517C00B0CAFC /* LCRecommendationTableController.h */,
+				44B0FD29214F517C00B0CAFC /* LCRecommendationTableController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44B0FD20214F510600B0CAFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44B0FD21214F510600B0CAFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44B0FD22214F510600B0CAFC /* LCRecommendationTableViewCell.m */,
+				44B0FD23214F510600B0CAFC /* LCRecommendationTableViewCell.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44B0FD2B214F531700B0CAFC /* VideoContainer */ = {
+			isa = PBXGroup;
+			children = (
+				44B0FD2D214F531700B0CAFC /* Controllers */,
+				44B0FD2C214F531700B0CAFC /* Models */,
+				44B0FD2E214F531700B0CAFC /* Views */,
+			);
+			path = VideoContainer;
+			sourceTree = "<group>";
+		};
+		44B0FD2C214F531700B0CAFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44B0FD2D214F531700B0CAFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44B0FD2F214F534700B0CAFC /* LCVideoContainerController.h */,
+				44B0FD30214F534700B0CAFC /* LCVideoContainerController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44B0FD2E214F531700B0CAFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44B0FD32214F545000B0CAFC /* LCCommentToolBar.h */,
+				44B0FD33214F545000B0CAFC /* LCCommentToolBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		44C8B134213D3B690069B3DE = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +200,8 @@
 		44C8B13F213D3B690069B3DE /* LCVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				44B0FD2B214F531700B0CAFC /* VideoContainer */,
+				44B0FD1B214F500F00B0CAFC /* Recommendation */,
 				44C8B177213D43060069B3DE /* BaseViewController */,
 				44C8B164213D3C6F0069B3DE /* VideoPlayer */,
 				44C8B140213D3B690069B3DE /* AppDelegate.h */,
@@ -188,6 +278,8 @@
 			children = (
 				44C8B17F213D4BB60069B3DE /* LCVideoView.h */,
 				44C8B180213D4BB60069B3DE /* LCVideoView.m */,
+				444EDBD6213E8FC100D4813D /* LCVideoControlView.h */,
+				444EDBD7213E8FC100D4813D /* LCVideoControlView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B0FD36214F691400B0CAFC /* Avatar.jpg in Resources */,
 				44C8B14D213D3B6B0069B3DE /* LaunchScreen.storyboard in Resources */,
 				44C8B14A213D3B6B0069B3DE /* Assets.xcassets in Resources */,
 				44C8B148213D3B690069B3DE /* Main.storyboard in Resources */,
@@ -306,10 +399,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LCVideoPlayer/Pods-LCVideoPlayer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,11 +439,16 @@
 				44C8B17A213D43270069B3DE /* LCNavigationController.m in Sources */,
 				44C8B181213D4BB60069B3DE /* LCVideoView.m in Sources */,
 				44C8B172213D3E830069B3DE /* LCVideoModel.m in Sources */,
+				44B0FD24214F510600B0CAFC /* LCRecommendationTableViewCell.m in Sources */,
+				44B0FD31214F534700B0CAFC /* LCVideoContainerController.m in Sources */,
 				44C8B17D213D43690069B3DE /* LCRootTableViewController.m in Sources */,
 				44C8B176213D41250069B3DE /* LCVideoSource.m in Sources */,
 				44C8B150213D3B6B0069B3DE /* main.m in Sources */,
+				44B0FD34214F545000B0CAFC /* LCCommentToolBar.m in Sources */,
+				444EDBD8213E8FC100D4813D /* LCVideoControlView.m in Sources */,
 				44C8B142213D3B690069B3DE /* AppDelegate.m in Sources */,
 				44C8B16C213D3E080069B3DE /* LCVideoViewController.m in Sources */,
+				44B0FD2A214F517C00B0CAFC /* LCRecommendationTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

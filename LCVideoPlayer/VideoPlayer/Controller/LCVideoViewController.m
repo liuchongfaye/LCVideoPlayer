@@ -11,6 +11,7 @@
 #import <AVKit/AVKit.h>
 #import "LCVideoModel.h"
 #import "LCVideoView.h"
+#import "LCVideoControlView.h"
 @import Masonry;
 
 @interface LCVideoViewController ()
@@ -48,11 +49,20 @@
     
     self.avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
     [self.avPlayerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    
+    [self addChildViewController:[[UIViewController alloc] init]];
+    // LCVideoView 是承载 AVPlayer 的 view，目的是为了约束方便
     LCVideoView *videoView = [[LCVideoView alloc] init];
     [self.view addSubview:videoView];
+    
+    // 控制层可以放在当前vc上，但是为了vc的瘦身，单独出来了
+    LCVideoControlView *videoControlView = [[LCVideoControlView alloc] init];
+    [self.view addSubview:videoControlView];
 
     [videoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    [videoControlView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
 
@@ -68,8 +78,11 @@
     [super viewDidAppear:animated];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:
-(NSDictionary<NSString *,id> *)change context:(void *)context{
+- (void)dealloc {
+    [self.avPlayerItem removeObserver:self forKeyPath:@"status"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"status"]) {
         //取出status的新值
         AVPlayerItemStatus status = [change[NSKeyValueChangeNewKey]intValue];
